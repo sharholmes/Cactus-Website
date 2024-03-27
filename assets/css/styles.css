@@ -305,42 +305,7 @@ img {
   transform: translateY(-8px);
 }
 
-/*=============== CARE ===============*/
-.care_container {
-  display: grid;
-  padding-top: 32px;
-  row-gap: 32px;
-}
 
-.care_title {
-  display: grid;
-  justify-content: center;
-  font-size: 30px;
-}
-
-.care_img {
-  width: 270px;
-  z-index: -1;
-  filter: drop-shadow(4px 4px 8px #90c37c);
-  justify-self: center;
-}
-
-.care_list {
-  display: grid;
-  row-gap: 16px;
-}
-
-.care_item {
-  display: flex;
-  column-gap: 8px;
-  color: #101b09;
-  align-items: flex-start;
-}
-
-.care_item i{
-  font-size: 24px;
-  color: #90c37c;
-}
 
 
 
@@ -415,30 +380,31 @@ img {
 }
 
 /*=============== SWIPER CLASS ===============*/
-.swiper {
-  position: fixed;
-  /* z-index: 1; */
-  display: flex;
+/* .swiper {
+  position: fixed; */
+  /* z-index: -1; */
+  /* display: flex;
   justify-content: flex-start;
   margin: 0 auto;
   max-width: 100%;
   text-align: center;
-}
-.swiper-button-prev::after,
+} */
+
+/* .swiper-button-prev::after,
 .swiper-button-next::after {
   content: '';
-}
+} */
 
-.swiper-button-next,
-.swiper-button-prev {
+/* .swiper-button-next,
+.swiper-button-prev { */
   /* position: absolute; */
-  color: #f9fafa;
+  /* color: #f9fafa;
   font-size: 50px;
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-}
+} */
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -560,6 +526,8 @@ img {
     font-weight: 700;
     margin-top: 80px;
     margin-bottom: 40px;
+    margin-right: 120px;
+    /* align-items: center; */
   }
 
   .home_title span {
@@ -571,7 +539,9 @@ img {
     position: relative;
     z-index: -1;
     filter: drop-shadow(4px 4px 8px #83c94a );
-    margin: 0 auto 50px;
+    /* margin: 0 auto 50px; */
+    margin-left: 20px;
+    margin-right: 120px;
     align-items: center;
   }
 
@@ -585,6 +555,7 @@ img {
     margin-bottom: 4px;
     margin-top: 80px;
     margin-bottom: 40px;
+    margin-right: 120px;
   }
 
   .home_buttons {
@@ -592,6 +563,7 @@ img {
     justify-content: center;
     align-items: center;
     column-gap: 8px;
+    margin-right: 120px;
   }
 
   /*=============== About ===============*/
@@ -638,6 +610,10 @@ img {
   .about_title {
     font-size: 30px;
     text-align: center;
+    margin-right: 120px;
+  }
+  .about_description {
+    margin-right: 120px;
   }
 
   .about_title_card {
@@ -683,7 +659,8 @@ img {
   .shop_title {
     margin-bottom: 80px;
     align-items: center;
-    font-size: 50px;
+    font-size: 30px;
+    margin-right: 120px;
   }
   
   .shop_title_card {
@@ -716,6 +693,128 @@ img {
   }
 }
 
+  /*=============== CARE ===============*/
+  .care_container {
+    display: grid;
+    padding-top: 32px;
+    row-gap: 32px;
+  }
+
+  .care_title {
+    display: grid;
+    justify-content: center;
+    font-size: 30px;
+    margin-right: 120px;
+  }
+
+  .care_img {
+    width: 400px;
+    z-index: -1;
+    filter: drop-shadow(4px 4px 8px #90c37c);
+    justify-self: center;
+    margin-right: 120px;
+  }
+
+  .care_list {
+    display: grid;
+    row-gap: 16px;
+  }
+
+  .care_item {
+    display: flex;
+    column-gap: 8px;
+    color: #101b09;
+    align-items: flex-start;
+    font-size: 26px;
+    margin-right: 120px;
+  }
+
+  .care_item i{
+    font-size: 30px;
+    color: #90c37c;
+  }
+  /*=============== CONTACT ===============*/
+  .contact_container {
+    padding-top: 32px;
+    row-gap: 32px;
+    display: grid;
+    justify-content: center;
+  }
+
+  .contact_img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    width: 400px;
+    z-index: -1;
+    filter: drop-shadow(4px 4px 8px #83c94a );
+    justify-self: center;
+    margin-bottom: 50px;
+    margin-left: 120px;
+    margin-right: 220px;
+  }
+
+  .contact_content {
+    display: grid;
+    row-gap: 32px;
+    color: #101b09;
+    text-align: center;
+    margin-right: 120px;
+  }
+
+  .contact_title {
+    font-size: 30px;
+    margin-bottom: 50px;
+    margin-right: 120px;
+  }
+
+  .contact_title_card {
+    font-size: 26px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .contact_social {
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .contact_social a {
+    display: flex;
+    justify-content: center;
+    color: #90c37c;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: #90c37c;
+    text-decoration: none;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .contact_social a:hover {
+    background-color: #90c37c;
+    color:  white;
+    border-color: #90c37c;
+    box-shadow: 0 0 10px #90c37c;
+  }
+
+  .contact_info {
+    font-style: normal;
+    font-size: 24px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  
 /* For medium devices */
 @media screen and (min-width: 768px) {
   /*=============== HOME ===============*/
@@ -728,6 +827,8 @@ img {
     font-weight: 700;
     margin-top: 80px;
     margin-bottom: 40px;
+    margin-right: 225px;
+    margin-left: 123px;
     z-index: -1;
   }
   .home_title span {
@@ -740,14 +841,18 @@ img {
     margin-bottom: 4px;
     margin-top: 80px;
     margin-bottom: 40px;
+    margin-right: 225px;
+    margin-left: 123px;
     z-index: -1;
   }
   .home_img {
     width: 400px;
     z-index: -1;
     filter: drop-shadow(4px 4px 8px #83c94a );
-    margin: 0 auto 50px;
+    margin: 0 auto 100px;
     align-items: center;
+    margin-right: 225px;
+    margin-left: 123px;
   }
 
   /*=============== BUTTON ===============*/
@@ -760,6 +865,8 @@ img {
     display: inline-flex;
     align-items: center;
     column-gap: 12px;
+    margin-right: 225px;
+    margin-left: 123px;
   }
   
   .button span {
@@ -813,14 +920,22 @@ img {
   .about_data {
     text-align: center;
     margin-top: 20px;
+    margin-right: 120px;
     font-size: 26px;
     color: #101b09;
     margin-bottom: 50px;
+  }
+  .about_description {
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 80px;
   }
   .about_title {
     margin-bottom: 50px;
     font-size: 50px;
     text-align: center;
+    margin-right: 50px;
+    margin-left: 80px;
   }
   .about_title_card {
     font-size: 30px;
@@ -851,8 +966,8 @@ img {
     border: 2px solid #a3db76;
     border-radius: 16px;
     margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 80px;
+    margin-right: 150px;
     width: 500px;
   }
   .shop_img {
@@ -874,12 +989,16 @@ img {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 30px;
+    margin-left: 101px;
+    margin-right: 101px;
   }
   
   .shop_price {
     color: 	#f9fafa;
     font-weight: 600;
     font-size: 30px;
+    margin-left: 101px;
+    margin-right: 101px;
   }
   .shop_button {
     position: absolute;
@@ -905,6 +1024,7 @@ img {
     display: grid;
     justify-content: center;
     font-size: 50px;
+    margin-right: 120px;
   }
 
   .care_img {
@@ -912,6 +1032,7 @@ img {
     z-index: -1;
     filter: drop-shadow(4px 4px 8px #90c37c);
     justify-self: center;
+    margin-right: 120px;
   }
 
   .care_list {
@@ -938,6 +1059,8 @@ img {
     row-gap: 32px;
     display: grid;
     justify-content: center;
+    width: 600px;
+    height: 600;
   }
 
   .contact_img {
@@ -950,6 +1073,8 @@ img {
     filter: drop-shadow(4px 4px 8px #83c94a );
     justify-self: center;
     margin-bottom: 50px;
+    margin-right: 120px;
+    margin-left: 120px;
   }
 
   .contact_content {
@@ -957,22 +1082,29 @@ img {
     row-gap: 32px;
     color: #101b09;
     text-align: center;
+    margin-right: 120px;
   }
 
   .contact_title {
     font-size: 50px;
     margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 30px;
   }
 
   .contact_title_card {
     font-size: 26px;
     margin-bottom: 20px;
+    margin-right: 120px;
+    margin-left: 270px;
   }
 
   .contact_social {
     display: flex;
     justify-content: center;
     column-gap: 12px;
+    margin-right: 120px;
+    margin-left: 200px;
   }
 
   .contact_social a {
@@ -988,6 +1120,7 @@ img {
     color: #90c37c;
     text-decoration: none;
     align-items: center;
+    margin-right: 120px;
   }
 
   .contact_social a:hover {
@@ -1000,6 +1133,7 @@ img {
   .contact_info {
     font-style: normal;
     font-size: 24px;
+    margin-right: 120px;
   }
 
 
@@ -1023,6 +1157,9 @@ img {
     display: inline-flex;
     align-items: center;
     column-gap: 12px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 50px;
   }
   
   .button span {
@@ -1093,6 +1230,7 @@ img {
     position: fixed;
     top: 0;
     right: 100%;
+    z-index: 15;
     background-color:	#e5eddb;
     width: 60%;
     height: 100%;
@@ -1170,8 +1308,9 @@ img {
     width: 400px;
     z-index: -1;
     filter: drop-shadow(4px 4px 8px #83c94a );
-    margin: 0 auto 50px;
     align-items: center;
+    margin-left: 250px;
+    margin-right: 250px;
   }
 
   /*=============== ABOUT ===============*/
@@ -1185,7 +1324,7 @@ img {
   }
 
   .about_card {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     margin-top: 100px;
     position: relative;
     width: 300px;
@@ -1258,6 +1397,7 @@ img {
     top: 200px;
     bottom: 500px;
     left: 150px;
+    margin-bottom: 100px;
   }
 
   .shop_img {
@@ -1348,5 +1488,79 @@ img {
     font-size: 30px;
     color: #90c37c;
   }
+  /*=============== CONTACT ===============*/
+  .contact_container {
+    padding-top: 32px;
+    row-gap: 32px;
+    display: grid;
+    justify-content: center;
+    width: 600px;
+    height: 600;
+  }
+  .contact_img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    width: 400px;
+    z-index: -1;
+    filter: drop-shadow(4px 4px 8px #83c94a );
+    justify-self: center;
+    margin-bottom: 50px;
+    margin-right: 250px;
+    margin-left: 520px;
+  }
+  .contact_content {
+    display: grid;
+    row-gap: 32px;
+    color: #101b09;
+    text-align: center;
+    margin-right: 120px;
+  }
+  .contact_title {
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 300px;
+  }
+  .contact_title_card {
+    font-size: 26px;
+    margin-bottom: 20px;
+    margin-left: 350px;
+  }
+  .contact_social {
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+    margin-left: 450px;
+  }
 
+  .contact_social a {
+    display: flex;
+    justify-content: center;
+    color: #90c37c;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: #90c37c;
+    text-decoration: none;
+    align-items: center;
+    /* margin-right: 120px; */
+  }
+
+  .contact_social a:hover {
+    background-color: #90c37c;
+    color:  white;
+    border-color: #90c37c;
+    box-shadow: 0 0 10px #90c37c;
+  }
+
+  .contact_info {
+    font-style: normal;
+    font-size: 24px;
+    margin-left: 350px;
+  }
 }
