@@ -40,13 +40,13 @@
 } */
 
 .swiper {
-  position: fixed;
-  z-index: -1;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 auto;
-  max-width: 100%;
-  text-align: center;
+    position: relative;
+    /* z-index: -1; */
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
 }
 
 .swiper-button-prev::after,
