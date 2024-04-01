@@ -87,25 +87,3 @@ buttons.forEach(function(button) {
   });
 });
 
-/*=============== THEME TOGGLE ===============*/
-// Function to toggle between light and dark themes
-const toggleTheme = () => {
-  if (themeSwitch.checked) {
-      body.classList.add('dark-theme');
-      localStorage.setItem('theme', 'dark-theme');
-  } else {
-      body.classList.remove('dark-theme');
-      localStorage.removeItem('theme'); // Remove the theme from localStorage when unchecked
-  }
-};
-
-// Attach event listener to the theme toggle checkbox
-const themeSwitch = document.getElementById('theme-switch');
-
-if (themeSwitch) {
-  // Apply the theme based on the checkbox state on page load
-  toggleTheme();
-  
-  themeSwitch.addEventListener('change', toggleTheme);
-}
-
