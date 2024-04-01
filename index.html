@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lightgreen">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <!--===============  SWIPER CSS ===============-->
+   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="assets/js/swiper-bundle.min.js"></script>
+   <script src="assets/js/main.js" defer></script>
+   <script defer>
+      const changeTheme = () => {
+         console.log("button clicked")
+         const rootTheme = document.documentElement
+         let currentTheme = rootTheme.getAttribute('data-theme'),
+            setTheme
+         setTheme = (currentTheme === 'lightgreen') ? 'darkgreen' : 'lightgreen'
+         rootTheme.setAttribute('data-theme', setTheme);
+         document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#theme-switch').addEventListener('click', changeTheme);
+            console.log("themeswitched")
+         })
+      }
+   </script>
+
+
+   <title>Pricklies</title>
+</head>
+
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="#" class="nav_logo">
+            <i class="ri-cactus-line"></i> Pricklee's
+         </a>
+         <div class="nav_menu" id="nav-menu">
+            <ul class="nav_list">
+               <li class="nav_item">
+                  <a href="#" class="nav_link">Home</a>
+               </li>
+
+               <li class="nav_item">
+                  <a href="#" class="nav_link">About</a>
+               </li>
+
+               <li class="nav_item">
+                  <a href="#" class="nav_link">Shop</a>
+               </li>
+
+               <li class="nav_item">
+                  <a href="#" class="nav_link">Care</a>
+               </li>
+
+               <li class="nav_item">
+                  <a href="#" class="nav_link">Contact</a>
+               </li>
+            </ul>
+
+            <!-- close button -->
+            <div class="nav_close" id="nav-close">
+               <i class="ri-close-line"></i>
+            </div>
+         </div>
+
+         <!-- toggle from light to dark -->
+         <div class="nav_actions">
+            <div class="theme-toggle" id="theme-toggle">
+               <button onclick="changeTheme()" id="theme-switch">Toggle</button>
+            </div>
+
+            <!-- shopping cart -->
+            <div class="icon-cart" id="cart-menu">
+               <i class="ri-shopping-cart-line"></i>
+               <ul id="cartItems">
+               </ul>
+            </div>
+
+            <!-- toggle button -->
+            <div class="nav_toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </div>
+
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home">
+         <div class="home_container container">
+            <div class="home_content">
+
+               <div class="home_swiper swiper">
+                  <div class="home_swiper swiper-wrapper">
+                     <div class="swiper-wrapper">
+                        <article class="home_article swiper-slide">
+                           <img src="assets/img/home-cactus.png" alt="image" class="home_img">
+                           <h1 class="home_title">
+                              ORNAMENTAL <br>
+                              <span> PLANTS</span> FOR <br>
+                              YOUR HOME <br>
+                           </h1>
+
+                           <p class="home_description">
+                              We design ornamental plants for your
+                              home in-house for an original style and
+                              quality you won't find anywhere else.
+                           </p>
+
+                           <div class="home_data">
+                              <div class="home_buttons">
+                                 <a href="#" class="button">
+                                    <span>
+                                       <i class="ri-arrow-right-line"></i>
+                                    </span>
+                                    GO TO SHOP
+                                 </a>
+
+                                 <a href="#" class="button_link"></a>
+                              </div>
+                           </div>
+                        </article>
+
+                        <!--==================== ABOUT ====================-->
+                        <article class="home_article swiper-slide">
+                           <div class="about_container container grid">
+                              <div class="about_data">
+                                 <h2 class="about_title">
+                                    NEW PLANTS FOR <br> YOUR HOME
+                                 </h2>
+
+                                 <p class="about_description">
+                                    Select new ornamental plants for home
+                                    decoration and obtain an atmosphere of
+                                    harmony and freshness.
+                                 </p>
+                              </div>
+
+                              <div class="about_content grid">
+                                 <article class="about_card">
+                                    <img src="assets/img/new-cactus-1.png" alt="image" class="about_image">
+                                    <h2 class="about_title_card">Gymnocalycium Cactus</h2>
+                                 </article>
+
+                                 <article class="about_card">
+                                    <img src="assets/img/new-cactus-2.png" alt="image" class="about_image">
+                                    <h2 class="about_title_card">Lily Pad Succulent</h2>
+                                 </article>
+
+                                 <article class="about_card">
+                                    <img src="assets/img/new-cactus-3.png" alt="image" class="about_image">
+                                    <h2 class="about_title_card">Rebutia Cactus</h2>
+                                 </article>
+
+                              </div>
+
+                           </div>
+                        </article>
+
+                        <!--==================== SHOP ====================-->
+                        <article class="home_article swiper-slide">
+                           <h2 class="shop_title">
+                              THE BEST PLANTS
+                           </h2>
+
+                           <article class="shop_card" data-product-id="1">
+                              <img src="assets/img/shop-cactus-1.png" alt="image" class="shop_img">
+
+                              <h3 class="shop_title_card">Gymnocalycium <br> Cactus</h3>
+                              <span class="shop_price">$15</span>
+
+                              <button class="shop_button">
+                                 <i class="ri-shopping-bag-line"></i>
+                              </button>
+                           </article>
+
+                           <article class="shop_card" data-product-id="2">
+                              <img src="assets/img/shop-cactus-2.png" alt="image" class="shop_img">
+
+                              <h3 class="shop_title_card">Echeveria <br> Succulent</h3>
+                              <span class="shop_price">$10</span>
+
+                              <button class="shop_button">
+                                 <i class="ri-shopping-bag-line"></i>
+                              </button>
+                           </article>
+
+                           <article class="shop_card" data-product-id="3">
+                              <img src="assets/img/shop-cactus-3.png" alt="image" class="shop_img">
+
+                              <h3 class="shop_title_card">Ferocactus <br> Cactus</h3>
+                              <span class="shop_price">$15</span>
+
+                              <button class="shop_button">
+                                 <i class="ri-shopping-bag-line"></i>
+                              </button>
+                           </article>
+
+                           <article class="shop_card" data-product-id="4">
+                              <img src="assets/img/shop-cactus-4.png" alt="image" class="shop_img">
+
+                              <h3 class="shop_title_card">Key Lime Pie <br> Succulent</h3>
+                              <span class="shop_price">$10</span>
+
+                              <button class="shop_button">
+                                 <i class="ri-shopping-bag-line"></i>
+                              </button>
+                           </article>
+
+                           <article class="shop_card" data-product-id="4">
+                              <img src="assets/img/shop-cactus-5.png" alt="image" class="shop_img">
+
+                              <h3 class="shop_title_card">Melocactus <br> Cactus</h3>
+                              <span class="shop_price">$15</span>
+
+                              <button class="shop_button">
+                                 <i class="ri-shopping-bag-line"></i>
+                              </button>
+                           </article>
+                        </article>
+
+                        <!--==================== CARE ====================-->
+                        <article class="home_article swiper-slide">
+                           <h2 class="care_title">
+                              CARE AND HEALTH FOR <br> YOUR CACTUS
+                           </h2>
+
+                           <div class="care_container container grid">
+                              <img src="assets/img/care-cactus.png" alt="image" class="care_img">
+                              <ul class="care_list">
+                                 <li class="care_item">
+                                    <i class="ri-checkbox-fill"></i>
+                                    <p>
+                                       In cold times, add water once a month
+                                       and during the summer water it when the
+                                       soil is dry.
+                                    </p>
+                                 </li>
+
+                                 <li class="care_item">
+                                    <i class="ri-checkbox-fill"></i>
+                                    <p>
+                                       Use a well-draining potting mix to ensure
+                                       proper drainage and precent waterlogged roots.
+                                    </p>
+                                 </li>
+
+                                 <li class="care_item">
+                                    <i class="ri-checkbox-fill"></i>
+                                    <p>
+                                       Place your cactus in a location that receives
+                                       plenty of bright indirect sunlight.
+                                    </p>
+                                 </li>
+
+                                 <li class="care_item">
+                                    <i class="ri-checkbox-fill"></i>
+                                    <p>
+                                       Water your cactus sparingly, allowing the soil
+                                       to dry out completely between waterings.
+                                    </p>
+                                 </li>
+
+                                 <li class="care_item">
+                                    <i class="ri-checkbox-fill"></i>
+                                    <p>
+                                       Keep your cactus in an environment with
+                                       consisten temperatures and low humidity.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </article>
+
+                        <!--==================== CONTACT ====================-->
+                        <article class="home_article swiper-slide">
+                           <div class="contact_container container grid">
+                              <img src="assets/img/contact-cactus.png" alt="" class="contact_img">
+                              <h2 class="contact_title">
+                                 YOU WANT A CACTUS <br> CONTACT US
+                              </h2>
+
+                              <div class="contact_content">
+                                 <div class="contact_write">
+                                    <h3 class="contact_title_card">Write to us</h3>
+
+                                    <div class="contact_social">
+                                       <a href="https://www.instagram.com/" target="_blank">
+                                          <i class="ri-instagram-fill"></i>
+                                       </a>
+
+                                       <a href="https://www.messenger.com/" target="_blank">
+                                          <i class="ri-messenger-fill"></i>
+                                       </a>
+
+                                       <a href="https://www.whatsapp.com/" target="_blank">
+                                          <i class="ri-whatsapp-fill"></i>
+                                       </a>
+                                    </div>
+                                 </div>
+
+                                 <div>
+                                    <h3 class="contact_title_card">Call us</h3>
+
+                                    <address class="contact_info">
+                                       +1 (012) 345-6789 <br>
+                                    </address>
+                                 </div>
+
+                                 <div>
+                                    <h3 class="contact_title_card">Find us here</h3>
+                                    <address class="contact_info">
+                                       800 W University Pkwy, Orem, <br>
+                                       UT 84058
+                                    </address>
+                                 </div>
+
+                              </div>
+                           </div>
+                        </article>
+                     </div>
+                  </div>
+
+                  <!-- Navigation buttons -->
+                  <div class="swiper-button-prev">
+                  </div>
+                  <div class="swiper-button-next">
+                  </div>
+               </div>
+            </div>
+      </section>
+   </main>
+
+   <!--=============== SCROLLREVEAL ===============-->
+
+
+   <!--=============== MAIN JS ===============-->
+
+</body>
+
+</html>
