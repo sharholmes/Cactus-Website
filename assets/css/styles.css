@@ -1069,8 +1069,9 @@ input.error {
     margin-right: 0px;
     margin-left: 30px;
   }
-
-
+  form {
+    margin-left: 30px;
+  }
 }
 
 /* For large devices */
@@ -1574,5 +1575,9 @@ input.error {
     font-style: normal;
     font-size: 24px;
     color: var(--black-color);
+  }
+  form {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
