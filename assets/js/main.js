@@ -59,31 +59,3 @@ const goToShop = (event) => {
 
 goToShopButton.addEventListener('click', goToShop);
 
-
-/*=============== ADD TO CART ===============*/
-// Get the cart button and the cart menu
-var cartButton = document.getElementById('cartButton');
-var cartMenu = document.getElementById('cartMenu');
-
-// Toggle the visibility of the cart menu when the cart button is clicked
-cartButton.addEventListener('click', function() {
-  cartMenu.classList.toggle('show');
-});
-
-// Get the cart items element
-var cartItems = document.getElementById('cartItems');
-
-// Add an event listener to each shop button
-buttons.forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    event.preventDefault();
-    var productId = event.target.closest('.shop_card').dataset.productId;
-    cart.push(productId);
-
-    // Create a new list item for the product and add it to the cart items
-    var listItem = document.createElement('li');
-    listItem.textContent = 'Product ' + productId;
-    cartItems.appendChild(listItem);
-  });
-});
-
