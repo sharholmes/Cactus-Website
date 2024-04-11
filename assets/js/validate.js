@@ -47,34 +47,29 @@ function checkRequired() {
     }
 
     //check state
-    const stateRegex = /^(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)$/;
-    if (!stateRegex.test(state.value)) {
-        errorMessages.push("State must be a valid two-letter abbreviation.");
-        state.classList.add("error");
-    }
-
-    //check message
-    //get checkboxes
-    const checkboxes = document.querySelectorAll("input[type=checkbox]");
-
-    //check if a least one checkbox is selected
-    let isOneChecked = false;
-    for (let i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i].checked) {
-            isOneChecked = true;
+    const stateRadioButtons = document.querySelectorAll("input[name='state']");
+    let isStateSelected = false;
+    for (let i = 0; i < stateRadioButtons.length; i++) {
+        if (stateRadioButtons[i].checked) {
+            isStateSelected = true;
             break;
         }
     }
-
-    if((!isOneChecked)) {
-        errorMessages.push("At least one checkbox must be selected");
-        const checkboxContainer = document.getElementById("checkboxContainer");
-        if (checkboxContainer) {
-            checkboxContainer.classList.add("error");
+    if (!isStateSelected) {
+        errorMessages.push("State is required.");
+        // Add error class to state radio button group container if it exists
+        const stateContainer = document.getElementById("state-container");
+        if (stateContainer) {
+            stateContainer.classList.add("error");
         }
     }
-    displayErrors();
 
+    //check message
+    if (message.value === "") {
+        errorMessages.push("Message is required.");
+        message.classList.add("error");
+    }
+    displayErrors();
 }
 
 function checkFormat () {
@@ -123,15 +118,25 @@ function displayErrors() {
       formErrors.classList.add("hide");
     }
  }
- 
- //events
+
+//event for select state
+const stateRadioButtons = document.querySelectorAll("input[name='state']");
+stateRadioButtons.forEach(radioButton => {
+    radioButton.addEventListener('change', function() {
+        if (this.checked) {
+            console.log("Selected state is " + this.value);
+        }
+    });
+});
+
+ //event for select page
+document.getElementById("message").addEventListener("change", function() {
+    console.log("Selected option is " + this.value);
+});
+
+ //event for submit
  document.getElementById("submit").addEventListener("click", function(event) {
     checkForm();
     // Prevent default form action. DO NOT REMOVE THIS LINE
     event.preventDefault();
  });
-
-//event for select
-document.getElementById("message").addEventListener("change", function() {
-    console.log("Selected option is " + this.value);
-});
