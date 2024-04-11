@@ -332,6 +332,7 @@
                                        <input type="text" id="city" name="city">
                                     </div>
                                     <div>
+                                       <!-- maybe make this a drop down menu -->
                                        <label for="state">State</label>
                                        <input type="text" id="address" name="address">
                                     </div>
@@ -349,7 +350,13 @@
                                     </div>
                                     <div>
                                        <label for="message">How did you find my page?</label>
-                                       <input type="text" id="message" name="message">
+                                       <select id="message" name="message">
+                                          <option value="">Select</option>
+                                          <option value="instagram">Instagram</option>
+                                          <option value="facebook">Facebook</option>
+                                          <option value="google">Google</option>
+                                          <option value="other">Other</option>
+                                       </select>
                                     </div>
                                     <div id="formErrors"></div>
                                     <div>
