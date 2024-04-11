@@ -21,7 +21,7 @@ const navMenu = document.getElementById('nav-menu'),
 const navLinks = document.querySelectorAll('.nav_link');
 
 const linkAction = () => {
-    const navMenu = document.getElementById('nav-menu');
+    navMenu = document.getElementById('nav-menu');
     navMenu.classList.remove('show-menu');
 };
 
