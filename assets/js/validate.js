@@ -93,7 +93,7 @@ function checkRequired() {
 
     //check message
     if (message.value === "") {
-        errorMessages.push("Message is required.");
+        errorMessages.push("How you found us is required.");
         message.classList.add("error");
     }
     displayErrors();
