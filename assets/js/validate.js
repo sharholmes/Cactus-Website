@@ -112,45 +112,60 @@ function displayErrors() {
  
 
  //event for first name
-//  document.getElementById("firstName").addEventListener("input", function() {
-//     console.log("First Name is " + this.value);
-// });
-firstName.addEventListener('input', function() {
-    console.log('First Name input changed!');
-  });
+ document.getElementById("firstName").addEventListener("input", function() {
+    checkRequired();
+    if (this.value && !this.classList.contains('error')) {
+        errorMessages = errorMessages.filter(message => !message.includes('First Name'));
+    }
+});
 
  //event for last name
- document.getElementById("lastName").addEventListener("change", function() {
-    console.log("Last Name is " + this.value);
+ document.getElementById("lastName").addEventListener("input", function() {
+    checkRequired();
+    if (this.value && !this.classList.contains('error')) {
+        errorMessages = errorMessages.filter(message => !message.includes('Last Name'));
+    }
 });
 
  //event for address
- document.getElementById("address").addEventListener("change", function() {
-    console.log("Address is " + this.value);
+document.getElementById("address").addEventListener("input", function() {
+    checkRequired();
+    if (this.value && !this.classList.contains('error')) {
+        errorMessages = errorMessages.filter(message => !message.includes('Address'));
+    }
 });
 
  //event for city
- document.getElementById("city").addEventListener("change", function() {
-    console.log("City is " + this.value);
+document.getElementById("city").addEventListener("input", function() {
+    checkRequired();
+    if (this.value && !this.classList.contains('error')) {
+        errorMessages = errorMessages.filter(message => !message.includes('City'));
+    }
 });
 
 //event for select state
-document.getElementById("state").addEventListener("change", function() {
-    console.log("Selected option is " + this.value);
+document.getElementById("state").addEventListener("chnage", function() {
+    checkRequired();
+    if (this.value && !this.classList.contains('error')) {
+        errorMessages = errorMessages.filter(message => !message.includes('State'));
+    }
 });
 
 //event for "how did you find us" select
 document.getElementById("message").addEventListener("change", function() {
-    console.log("Selected option is " + this.value);
+    checkRequired();
+    if (this.value && !this.classList.contains('error')) {
+        errorMessages = errorMessages.filter(message => !message.includes('Message'));
+    }
 });
 
-//event for submit
+// Event for submit
 document.getElementById("submit").addEventListener("click", function(event) {
-    checkRequired()
+    checkRequired();
     //checkFormat();
     // Prevent default form action. DO NOT REMOVE THIS LINE
     event.preventDefault();
-    
+
     // If there are no error messages, display the thank you message
     if (errorMessages.length === 0) {
         document.getElementById('thankYouMessage').classList.remove('hidden');
