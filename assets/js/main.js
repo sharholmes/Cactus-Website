@@ -50,14 +50,36 @@ let swiperHome = new Swiper('.home_swiper', {
 
 /*=============== HIDE / SHOW FORM ===============*/
 window.onload = function() {
-    var homeCactusImage = document.querySelector('img[src="home-cactus.png"]');
+    var visibleImages = ['care-cactus', 'home-cactus', 'new-cactus-1', 'new-cactus-2', 'new-cactus-3', 'shop-cactus-1', 'shop-cactus-2', 'shop-cactus-3', 'shop-cactus-4', 'shop-cactus-5'];
     var form = document.querySelector('form');
-    
-    // Initially show the form
-    form.style.display = 'block';
-    
-    // If home-cactus.png image is present, hide the form
-    if (homeCactusImage) {
-        form.style.display = 'none';
+    var homeCactusImage = document.querySelector('.home_img'); // Selecting the image by its class
+
+    // Function to check if any of the specified images are visible
+    function isImageVisible() {
+        for (var i = 0; i < visibleImages.length; i++) {
+            var image = document.querySelector('img[src="assets/img/' + visibleImages[i] + '.png"]');
+            if (image && image.offsetParent !== null) {
+                return true; // At least one of the images is visible
+            }
+        }
+        return false; // None of the images are visible
     }
+    
+    // Initially show/hide the form based on the visibility of images
+    if (isImageVisible() && !document.querySelector('img[src="assets/img/contact-cactus.png"]')) {
+        form.style.display = 'none';
+    } else {
+        form.style.display = 'block';
+    }
+    
+    // Monitor for changes in visibility and update the form display accordingly
+    document.addEventListener('scroll', function() {
+        if (isImageVisible() && !document.querySelector('img[src="assets/img/contact-cactus.png"]')) {
+            form.style.display = 'none';
+        } else {
+            form.style.display = 'block';
+        }
+    });
 };
+
+
