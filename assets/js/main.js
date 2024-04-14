@@ -52,7 +52,10 @@ let swiperHome = new Swiper('.home_swiper', {
 window.onload = function() {
     var visibleImages = ['care-cactus', 'home-cactus', 'new-cactus-1', 'new-cactus-2', 'new-cactus-3', 'shop-cactus-1', 'shop-cactus-2', 'shop-cactus-3', 'shop-cactus-4', 'shop-cactus-5'];
     var form = document.querySelector('form');
-    var homeCactusImage = document.querySelector('.home_img'); // Selecting the image by its class
+    var homeCactusImage = document.querySelector('.home_img');
+    var aboutCactusImage = document.querySelector('.about_img');
+    var shopCactusImage = document.querySelector('.shop_img');
+    var careCactusImage = document.querySelector('.care_img');
 
     // Function to check if any of the specified images are visible
     function isImageVisible() {
