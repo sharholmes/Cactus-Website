@@ -757,4 +757,6 @@ button.swiper-pagination-bullet {
 .swiper-cards .swiper-slide {
     transform-origin: center bottom;
     -webkit-backface-visibility: hidden;
-    backface
+    backface-visibility: hidden;
+    overflow: hidden
+}

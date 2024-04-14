@@ -677,12 +677,8 @@ select {
 input.error {
   border: 2px solid #FF6961;
 }
-.hidden {
-  display: none;
-}
-#logVisit {
-  cursor: pointer;
-}
+
+
 
 
 /* For medium devices */
@@ -1585,4 +1581,13 @@ input.error {
     box-shadow: var(--contact-social);
   }
 
-  
+  .contact_info {
+    font-style: normal;
+    font-size: 24px;
+    color: var(--black-color);
+  }
+  form {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
