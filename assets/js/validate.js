@@ -156,19 +156,3 @@ document.getElementById("submit").addEventListener("click", function(event) {
         document.getElementById('thankYouMessage').classList.remove('hidden');
     }
 });
-// Event for thank you message
-document.getElementById("thankYouMessage").addEventListener("click", function() {
-    // Reset the form
-    document.getElementById('form').reset();
-
-    // Hide the thank you message
-    this.classList.add('hidden');
-});
-
-document.addEventListener('input', function(event) {
-    if (event.target.id === 'firstName') {
-        console.log("First Name is " + event.target.value);
-        // Other validation logic here...
-    }
-    // Repeat for other fields as needed...
-});
