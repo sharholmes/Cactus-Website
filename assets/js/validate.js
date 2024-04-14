@@ -110,12 +110,14 @@ function displayErrors() {
     }
  }
  
-/*=============== TO DO: add click out of field show error ===============*/
 
  //event for first name
- document.getElementById("firstName").addEventListener("input", function() {
-    console.log("First Name is " + this.value);
-});
+//  document.getElementById("firstName").addEventListener("input", function() {
+//     console.log("First Name is " + this.value);
+// });
+firstName.addEventListener('input', function() {
+    console.log('First Name input changed!');
+  });
 
  //event for last name
  document.getElementById("lastName").addEventListener("change", function() {
@@ -148,4 +150,25 @@ document.getElementById("submit").addEventListener("click", function(event) {
     //checkFormat();
     // Prevent default form action. DO NOT REMOVE THIS LINE
     event.preventDefault();
+    
+    // If there are no error messages, display the thank you message
+    if (errorMessages.length === 0) {
+        document.getElementById('thankYouMessage').classList.remove('hidden');
+    }
+});
+// Event for thank you message
+document.getElementById("thankYouMessage").addEventListener("click", function() {
+    // Reset the form
+    document.getElementById('form').reset();
+
+    // Hide the thank you message
+    this.classList.add('hidden');
+});
+
+document.addEventListener('input', function(event) {
+    if (event.target.id === 'firstName') {
+        console.log("First Name is " + event.target.value);
+        // Other validation logic here...
+    }
+    // Repeat for other fields as needed...
 });

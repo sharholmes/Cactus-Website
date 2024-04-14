@@ -682,6 +682,9 @@ button.swiper-pagination-bullet {
     pointer-events: auto;
     visibility: visible
 }
+.swiper-slide-active {
+    height: 850px;
+}
 
 .swiper-cube .swiper-cube-shadow {
     position: absolute;

@@ -1,3 +1,5 @@
+/*=============== TO DO: fix the look of the form on all screens ===============*/
+
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Smooch&display=swap");
 
@@ -538,6 +540,7 @@ form h2 {
 /*=============== CONTACT ===============*/
 .contact_container {
   width: 300px;
+  height: 850px;
   padding-top: 32px;
   row-gap: 32px;
   display: grid;
@@ -622,11 +625,16 @@ form h2 {
   margin-right: 0px;
 }
 form {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 1000px;
+  left: 60px;
+  display: block;
+  max-width: 300;
+  max-height: 300;
   margin-left: 30px;
   padding: 24px 12px 24px 12px;
 }
+
 form h2 {
   margin-top: 5px;
 }
@@ -668,6 +676,12 @@ select {
 
 input.error {
   border: 2px solid #FF6961;
+}
+.hidden {
+  display: none;
+}
+#logVisit {
+  cursor: pointer;
 }
 
 
